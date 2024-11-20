@@ -11,57 +11,94 @@ body {
   line-height: 1.6;
 }
 
-.toc {
-  position: fixed;
+/* General TOC Container */
+#TOC {
+  margin: 25px 0px 20px 0px;
+  position: relative;
   top: 50px;
-  left: 30px;
-  width: 320px;
-  max-width: 100%;
-  max-height: 80vh;
+  left: 20px;
+  width: 260px;
+  max-width: 20%;
+  max-height: 85%;
   overflow-y: auto;
-  text-align: left;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
 }
 
-.toc a {
-  display: block;
-  padding: 5px;
-  text-align: left;
+/* Adjust TOC for Smaller Screens */
+@media (max-width: 768px) {
+  #TOC {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    padding: 15px;
+  }
+}
+
+/* Print-Specific TOC Adjustments */
+@media print {
+  .toc-content {
+    float: right;
+  }
+}
+
+/* TOC Content Padding */
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+/* Main Container Width */
+div.main-container {
+  max-width: 1200px;
+}
+
+/* Adjust TOC Widths for Responsive Layout */
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* TOC List and Items */
+.tocify ul, .tocify li {
+  line-height: 20px;
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+  padding: 5px 10px;
   text-decoration: none;
   color: #007bff;
 }
 
-.toc a:hover {
-  color: #0056b3;
+.tocify .list-group-item:hover {
   text-decoration: underline;
-}
-
-.toc h2, .toc h3, .toc h4 {
-  margin: 10px 0;
-  font-size: 16px;
-  text-align: left;
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  .toc {
-    position: static;
-    width: 100%;
-    max-height: none;
-    overflow: hidden;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }
-
-  .toc a {
-    padding: 10px;
-  }
+  color: #0056b3;
 }
 
 

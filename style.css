@@ -4,3 +4,16 @@
 .text-container {
   margin-top: 200px;  /* Add space above the text */
 }
+
+body {
+  text-align: left;
+  font-size: 18px; /* Adjust the value as needed, e.g., 16px for normal, 18px for slightly larger */
+  line-height: 1.6;
+}
+
+
+
+
+
+
+

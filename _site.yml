@@ -3,7 +3,9 @@ navbar:
   output:
   html_document:
     css: styles.css
-  
+    toc: true
+    toc_float: true
+    toc_depth: 4
   
 
   ##left:

@@ -1,13 +1,13 @@
 .plot-container {
-  margin-bottom: 200px;  /* Add space below the plot */
+  margin-bottom: 200px;  
 }
 .text-container {
-  margin-top: 200px;  /* Add space above the text */
+  margin-top: 200px;  
 }
 
 body {
   text-align: left;
-  font-size: 18px; /* Adjust the value as needed, e.g., 16px for normal, 18px for slightly larger */
+  font-size: 18px; 
   line-height: 1.6;
 }
 
